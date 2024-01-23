@@ -34,8 +34,8 @@
       border-radius: 10px;
     }
 
-    .clear {
-      text-align: center;
+    .clear,
+    .submit {
       padding: 10px;
       margin: auto 1px;
       border: none;
@@ -66,17 +66,14 @@
       align-items: center;
       border: 1px solid blue;
       border-radius: 10px;
-      border-radius: 5px;
       cursor: pointer;
       background-color: #fff;
+      transition: background-color 0.3s;
     }
 
-    .link-container button {
-      border: 2px solid limegreen;
-    }
-
-    .link-container a {
-      border: 2px solid blue;
+    .link-container button:hover,
+    .link-container a:hover {
+      background-color: #e6e6e6;
     }
 
     .link-container button img,
@@ -94,61 +91,50 @@
     <h1 class="title">Search Engine Selector</h1>
   </header>
 
-
   <div class="search">
 
     <form action='//www.google.com/search' target='_blank' method="get" id="searchForm">
-      <input type="text" id="searchQuery" placeholder="Type your search keyword" name='q' required='required'>
+      <input type="text" id="searchQuery" placeholder="Type your search keyword" name='q' required='required' autofocus>
       <button class="clear" onclick="clearInput()">❌</button>
-
-      <div><button type='submit'>Search</button></div>
-
-
+      <div><button class="submit" type='submit'>Search 🔍</button></div>
     </form>
-
 
     <div class="link-container">
 
       <button onclick="search('google')">
-        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg"> google </button>
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg" alt="Google"> Google </button>
 
       <button onclick="search('bing')">
-        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/bing.svg"> Bing </button>
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/bing.svg" alt="Bing"> Bing </button>
 
       <button onclick="search('yandex')">
-        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/yandex.svg"> Yandex </button>
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/yandex.svg" alt="Yandex"> Yandex </button>
 
       <button onclick="search('duckduckgo')">
-        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/duckduckgo.svg"> Duckduckgo </button>
-
-      <button onclick="search('swisscows')">
-        <img src="//www.kadaza.com/system/logo_images/28265/original/swisscows.svg"> Swisscows </button>
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/duckduckgo.svg" alt="DuckDuckGo"> Duckduckgo </button>
 
       <button onclick="search('yahoo')">
-        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/yahoo.svg"> Yahoo </button>
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/yahoo.svg" alt="Yahoo"> Yahoo </button>
+
+      <button onclick="search('swisscows')">
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg" alt="Swisscows"> Swisscows </button>
 
       <button onclick="search('archive')">
-        <img src="//www.kadaza.com/system/logo_images/14813/original/theinternetarchive.svg"> Archive </button>
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg" alt="Archive"> Archive </button>
 
       <a href="#">
-        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg"> test </a>
-
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg" alt="#"> link </a>
 
       <!-- Add more links as needed -->
+
     </div>
-
-
   </div>
-
 
   <script>
     function search(engine) {
       const searchQuery = encodeURIComponent(document.getElementById('searchQuery').value);
       let searchUrl;
       switch (engine) {
-
-
-
         case 'google':
           searchUrl = `//www.google.com/search?q=${searchQuery}`;
           break;
@@ -177,11 +163,7 @@
           searchUrl = `//archive.org/search?query=${searchQuery}`;
           break;
 
-
           // Add cases for other search engines here
-
-
-
 
         default:
           console.error('Unsupported search engine');
@@ -190,7 +172,9 @@
       window.open(searchUrl, '_blank');
     }
 
-    function clearInput() { document.getElementById('searchQuery').value = ""; }
+    function clearInput() {
+      document.getElementById('searchQuery').value = "";
+    }
   </script>
 
 </body>
