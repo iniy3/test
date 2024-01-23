@@ -1,138 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Search Engine Selector</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Additional styling for a more professional look */
-        body {
-          font-family: Arial, sans-serif;
-          margin: 10px; padding: 10px;
-          background-color: #f4f4f4;
-        }
-        
-        form{ text-align: center;}
-        .search { margin-top: 20px; }
-        
-        input[type="text"] {
-            width: 70%;
-            padding: 15px; margin: 15px; margin-right: 3px; 
-            border: 1px solid #ccc; border-radius: 10px;
-        }
-        
-        .clear { 
-          text-align: center;
-          padding: 10px; margin: auto 1px;
-          border: none; border-radius: 10px;  cursor: pointer;
-        }
-        
-        .title { padding: 10px; text-align: center;}
-        
-        .link-container {
-          display: flex; flex-wrap: wrap; justify-content: space-around;
-          padding: 20px;
-        }
-        
-        .link-container button , .link-container a {
-          text-decoration: none;
-          margin: 10px; padding: 10px; 
-          text-align: center;
-          display: flex; flex-direction: column; align-items: center;
-          border: 1px solid blue; border-radius: 10px;
-          border-radius: 5px;  cursor: pointer;
-          background-color: #fff;
-        }
-        
-        .link-container button {border: 2px solid limegreen;}
-        .link-container a {border: 2px solid blue;}
-        
-        .link-container button img , .link-container a img {
-          width: 70px;  height: 70px; margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Search Engine Selector</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Additional styling for a more professional look */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      padding: 10px;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    .search {
+      margin-top: 20px;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 15px;
+      margin: 15px;
+      margin-right: 3px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .clear {
+      text-align: center;
+      padding: 10px;
+      margin: auto 1px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .title {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .link-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .link-container button,
+    .link-container a {
+      text-decoration: none;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid blue;
+      border-radius: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #fff;
+    }
+
+    .link-container button {
+      border: 2px solid limegreen;
+    }
+
+    .link-container a {
+      border: 2px solid blue;
+    }
+
+    .link-container button img,
+    .link-container a img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
+
 <body>
-  
-<header> <h1 class="title">Search Engine Selector</h1> </header>
-  
 
-<div class="search">
-  
-<form action="#" method="get" id="searchForm">
-<input type="text" id="searchQuery" name="q" placeholder="Type your search keyword">
-<button class="clear" onclick="clearInput()">❌</button> 
-</form>
-    
-  
-  <div class="link-container">
-    
-  <button onclick="search('google')">
-  <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg"> google </button>
-    
-  <button onclick="search('bing')">
-  <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/bing.svg"> Bing </button>
-    
-  <button onclick="search('yandex')">
-  <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/yandex.svg"> Yandex </button>
-
-  <button onclick="search('duckduckgo')">
-  <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/duckduckgo.svg"> Duckduckgo </button>
-
-<button onclick="search('swisscows')">
-  <img src="//www.kadaza.com/system/logo_images/28265/original/swisscows.svg"> Swisscows </button>
-
-  <button onclick="search('yahoo')">
-  <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/yahoo.svg"> Yahoo </button>
-
-  <button onclick="search('archive')">
-  <img src="//www.kadaza.com/system/logo_images/14813/original/theinternetarchive.svg"> Archive </button>
-
-  <a href="#"  >
-  <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg"> test </a>
+  <header>
+    <h1 class="title">Search Engine Selector</h1>
+  </header>
 
 
-    <!-- Add more links as needed -->
+  <div class="search">
+
+    <form action='//www.google.com/search' target='_blank' method="get" id="searchForm">
+      <input type="text" id="searchQuery" placeholder="Type your search keyword" name='q' required='required'>
+      <button class="clear" onclick="clearInput()">❌</button>
+
+      <div><button type='submit'>Search</button></div>
+
+
+    </form>
+
+
+    <div class="link-container">
+
+      <button onclick="search('google')">
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg"> google </button>
+
+      <button onclick="search('bing')">
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/bing.svg"> Bing </button>
+
+      <button onclick="search('yandex')">
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/yandex.svg"> Yandex </button>
+
+      <button onclick="search('duckduckgo')">
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/duckduckgo.svg"> Duckduckgo </button>
+
+      <button onclick="search('swisscows')">
+        <img src="//www.kadaza.com/system/logo_images/28265/original/swisscows.svg"> Swisscows </button>
+
+      <button onclick="search('yahoo')">
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/yahoo.svg"> Yahoo </button>
+
+      <button onclick="search('archive')">
+        <img src="//www.kadaza.com/system/logo_images/14813/original/theinternetarchive.svg"> Archive </button>
+
+      <a href="#">
+        <img src="//cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/google.svg"> test </a>
+
+
+      <!-- Add more links as needed -->
+    </div>
+
+
   </div>
 
-    
-</div>
+
+  <script>
+    function search(engine) {
+      const searchQuery = encodeURIComponent(document.getElementById('searchQuery').value);
+      let searchUrl;
+      switch (engine) {
 
 
-<script>
-function search(engine) {
-const searchQuery = encodeURIComponent(document.getElementById('searchQuery').value);  let searchUrl; switch (engine) {
-          
-          
-          
-  case 'google': searchUrl = `//www.google.com/search?q=${searchQuery}`; break;
-          
-  case 'bing': searchUrl = `//www.bing.com/search?q=${searchQuery}`; break;
-          
-   case 'yandex': searchUrl = `//yandex.com/search/?text=${searchQuery}`; break;
-          
-  case 'duckduckgo': searchUrl = `//duckduckgo.com/?q=${searchQuery}`; break;
-          
-  case 'swisscows': searchUrl = `//swisscows.com/en/web?query=${searchQuery}`; break;
-          
-  case 'yahoo': searchUrl = `//search.yahoo.com/search?p=${searchQuery}`; break;
-          
-  case 'archive': searchUrl = `//archive.org/search?query=${searchQuery}`; break;
-        
-          
- // Add cases for other search engines here
- 
- 
- 
- 
-default: console.error('Unsupported search engine');return;}
- window.open(searchUrl, '_blank');}
-function clearInput() {document.getElementById('searchQuery').value = "";}
 
-</script>
+        case 'google':
+          searchUrl = `//www.google.com/search?q=${searchQuery}`;
+          break;
+
+        case 'bing':
+          searchUrl = `//www.bing.com/search?q=${searchQuery}`;
+          break;
+
+        case 'yandex':
+          searchUrl = `//yandex.com/search/?text=${searchQuery}`;
+          break;
+
+        case 'duckduckgo':
+          searchUrl = `//duckduckgo.com/?q=${searchQuery}`;
+          break;
+
+        case 'swisscows':
+          searchUrl = `//swisscows.com/en/web?query=${searchQuery}`;
+          break;
+
+        case 'yahoo':
+          searchUrl = `//search.yahoo.com/search?p=${searchQuery}`;
+          break;
+
+        case 'archive':
+          searchUrl = `//archive.org/search?query=${searchQuery}`;
+          break;
+
+
+          // Add cases for other search engines here
+
+
+
+
+        default:
+          console.error('Unsupported search engine');
+          return;
+      }
+      window.open(searchUrl, '_blank');
+    }
+
+    function clearInput() { document.getElementById('searchQuery').value = ""; }
+  </script>
 
 </body>
+
 </html>
