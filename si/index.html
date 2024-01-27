@@ -140,8 +140,19 @@
 
 
 <!-- ########################################################## -->
-<div class="link-container"> <i class="cat">Questions :</i>
+<div class="link-container"> <i class="cat">Movies & Shows :</i>
       
+<button onclick="search('imdb')"><img src="//logo.clearbit.com/imdb.com" alt="imdb"> Imdb </button>
+      
+<button onclick="search('rottentomatoes')"><img src="//logo.clearbit.com/rottentomatoes.com" alt="rottentomatoes"> RottenTomatoes </button>
+
+</div> <hr>
+
+
+
+<!-- ########################################################## -->
+<div class="link-container"> <i class="cat">Questions :</i>
+
 <button onclick="search('reddit')"><img src="//logo.clearbit.com/reddit.com" alt="reddit"> Reddit </button>
 
 <button onclick="search('quora')"><img src="//logo.clearbit.com/quora.com" alt="quora"> Quora </button>
@@ -186,6 +197,23 @@
 
 
 <button onclick="search('udemy')"><img src="//logo.clearbit.com/udemy.com" alt="udemy"> Udemy </button>
+</div> <hr>
+
+
+
+
+<!-- ########################################################## -->
+<div class="link-container"> <i class="cat">Shoping :</i>
+      
+<button onclick="search('amazon')"><img src="//logo.clearbit.com/amazon.com" alt="amazon"> Amazon </button>
+      
+<button onclick="search('ebay')"><img src="//logo.clearbit.com/ebay.com" alt="ebay"> Ebay </button>
+
+<button onclick="search('aliexpress')"><img src="//logo.clearbit.com/aliexpress.com" alt="aliexpress"> AliExpress </button>
+
+<button onclick="search('noon')"><img src="//logo.clearbit.com/noon.com" alt="noon"> Noon </button>
+
+<button onclick="search('jumia')"><img src="//logo.clearbit.com/jumia.com" alt="jumia"> Jumia </button>
 </div> <hr>
 
 
@@ -312,6 +340,31 @@ searchUrl = `//linkedin.com/learning/search?keywords=${searchQuery}`; break;
 
 case 'udemy':
 searchUrl = `//udemy.com/courses/search/?q=${searchQuery}`; break;
+
+
+//movies
+case 'imdb':
+searchUrl = `//imdb.com/find/?ref_=opensearch&q=${searchQuery}`; break;
+
+case 'rottentomatoes':
+searchUrl = `//rottentomatoes.com/search?search=${searchQuery}`; break;
+
+
+//shoping
+case 'amazon':
+searchUrl = `//www.amazon.com/s?k=${searchQuery}`; break;
+
+case 'ebay':
+searchUrl = `//www.ebay.com/sch/i.html?_nkw=${searchQuery}`; break;
+
+case 'aliexpress':
+searchUrl = `//aliexpress.com/w/wholesale-${searchQuery}.html`; break;
+
+case 'noon':
+searchUrl = `//www.noon.com/search/?q=${searchQuery}`; break;
+
+case 'jumia':
+searchUrl = `//www.jumia.com/catalog/?q=test${searchQuery}`; break;
 
 
 // Add cases for other search engines here
