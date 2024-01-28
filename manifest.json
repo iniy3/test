@@ -1,7 +1,7 @@
 {
   "name": "Search It",
   "short_name": "Search It",
-  "start_url": "/index.html",
+  "start_url": "/testing/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
