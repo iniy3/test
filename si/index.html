@@ -2,51 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Search It</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+ <title>Search It</title>
+ <link rel="stylesheet" href="style.css">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 10px;  padding: 10px;
-      background-color: #f4f4f4;
-    }
-    form {  text-align: center;  }
-    .search { margin-top: 20px;}
-    input[type="text"] {
-      width: 70%;  padding: 15px;  margin: 15px;  margin-right: 3px;
-      border: 1px solid #ccc;  border-radius: 10px;
-    }
-    .clear {
-      padding: 10px;  margin: auto 1px;
-      border: none;  border-radius: 10px;  cursor: pointer;
-    }
-    .title {  padding: 10px;  text-align: center; }
-    .link-container {
-      display: flex;  flex-wrap: wrap;  justify-content: space-around;
-      padding: 20px;
-    }
-    .link-container button,  .link-container a {
-      text-decoration: none; text-align: center;
-      margin: 10px;  padding: 10px;
-      display: flex;  flex-direction: column;  align-items: center;
-      border: 1px solid blue;  border-radius: 10px;  cursor: pointer;
-      background-color: #fff;  transition: background-color 0.3s;
-    }
-    .link-container button:hover,
-    .link-container a:hover {  background-color: #e6e6e6; }
-    .link-container button img,
-    .link-container a img {width: 66px;  height: 66px;  margin-bottom: 10px;}
-    .cat {width:100%;  margin: 10px;  font-weight: bold;}
-  </style>
+<style>
+body {font-family: Arial,sans-serif; margin: 10px; padding: 10px; background-color: #f4f4f4;}
+form {text-align: center;}
+.search {margin-top: 20px;}
+input[type="text"] {width: 70%; padding: 15px; margin: 15px; margin-right: 3px; border: 1px solid #ccc; border-radius: 10px;}
+.clear {padding: 10px; margin: auto 1px; border: none; border-radius: 10px; cursor: pointer;}
+.title { padding: 10px; text-align: center; }
+.link-container {display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px;}
+.link-container button, .link-container a {text-decoration: none; text-align: center; margin: 10px; padding: 10px; display: flex; flex-direction: column; align-items: center; border: 1px solid blue; border-radius: 10px; cursor: pointer; background-color: #fff; transition: background-color 0.3s;}
+.link-container button:hover, .link-container a:hover {background-color: #e6e6e6;}
+.link-container button img,.link-container a img {width: 66px; height: 66px; margin-bottom: 10px;}
+.cat {width:100%; margin: 10px; font-weight: bold;}
+</style>
+
 </head>
 
 
 
-<body> <!-- logo api  //logo.clearbit.com/website.com -->
+<body>
 
 <header>
 <h1 class="title">Search It</h1>
@@ -62,323 +42,196 @@
 </form> 
 
 
-
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Web :</i>
-
-
 <button onclick="search('google')"><img src="//logo.clearbit.com/google.com" alt="Google"> Google </button>
-
 <button onclick="search('bing')"><img src="//logo.clearbit.com/bing.com" alt="Bing"> Bing </button>
-
 <button onclick="search('yahoo')"><img src="//logo.clearbit.com/yahoo.com" alt="yahoo"> Yahoo </button> 
-
 <button onclick="search('yandex')"><img src="//logo.clearbit.com/yandex.com" alt="Yandex"> Yandex </button>
-
-
 <button onclick="search('baidu')"><img src="//logo.clearbit.com/baidu.com" alt="baidu"> Baidu </button>
-
 <button onclick="search('naver')"><img src="//logo.clearbit.com/naver.com" alt="naver"> Naver </button>
-
 <button onclick="search('duckduckgo')"><img src="//logo.clearbit.com/ducduckgo.com" alt="DuckDuckGo"> Duckduckgo </button>
-
 <button onclick="search('startpage')"><img src="//logo.clearbit.com/startpage.com" alt="startpage"> Startpage </button>
-
 <button onclick="search('qwant')"><img src="//logo.clearbit.com/qwant.com" alt="qwant"> Qwant </button>
-
 <button onclick="search('brave')"><img src="//logo.clearbit.com/brave.com" alt="brave"> Brave </button>
-
 <button onclick="search('swisscows')"><img src="//logo.clearbit.com/swisscows.com" alt="Swisscows"> Swisscows </button>
-
 <button onclick="search('wikipedia')"><img src="//logo.clearbit.com/wikipedia.org" alt="wikipedia"> Wikipedia </button>
-
 <button onclick="search('archive')"><img src="//logo.clearbit.com/archive.org" alt="Archive"> Archive </button>
-
 </div> <hr>
-
 
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Videos :</i>
-
 <button onclick="search('youtube')"><img src="//logo.clearbit.com/youtube.com" alt="youtube"> YouTube </button>
-
 <button onclick="search('dailymotion')"><img src="//logo.clearbit.com/dailymotion.com" alt="dailymotion"> DailyMotion </button>
-
 <button onclick="search('vimeo')"><img src="//logo.clearbit.com/vimeo.com" alt="vimeo"> Vimeo </button>
-
 <button onclick="search('twitch')"><img src="//logo.clearbit.com/twitch.com" alt="twitch"> Twitch </button>
-
-
 </div> <hr>
 
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Images :</i>
-  
-<button onclick="search('pinterest')"><img src="//logo.clearbit.com/pinterest.com" alt="pinterest"> Pinterest </button>  
-
-<button onclick="search('flickr')"><img src="//logo.clearbit.com/flickr.com" alt="flickr"> Flickr </button>  
-
+<button onclick="search('pinterest')"><img src="//logo.clearbit.com/pinterest.com" alt="pinterest"> Pinterest </button> 
+<button onclick="search('flickr')"><img src="//logo.clearbit.com/flickr.com" alt="flickr"> Flickr </button> 
 <button onclick="search('tineye')"><img src="https://logo.clearbit.com/tineye.com" alt="TinyEye"> TinyEye </button>
-
-
 </div> <hr>
-
 
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">music :</i>
-  
 <button onclick="search('podcasts')"><img src="//logo.clearbit.com/podcasts.google.com" alt="podcasts"> G Podcasts </button>
-
 <button onclick="search('youtube-music')"><img src="//logo.clearbit.com/music.youtube.com" alt="youtube music"> YT Music </button>
-
 <button onclick="search('spotify')"><img src="//logo.clearbit.com/spotify.com" alt="spotify"> Spotify </button>
-
 <button onclick="search('itunes')"><img src="//logo.clearbit.com/itunes.com" alt="itunes"> Itunes </button>
-
- <button onclick="search('deezer')"><img src="//logo.clearbit.com/deezer.com" alt="deezer"> Deezer </button>
-
+<button onclick="search('deezer')"><img src="//logo.clearbit.com/deezer.com" alt="deezer"> Deezer </button>
 <button onclick="search('bandcamp')"><img src="//logo.clearbit.com/bandcamp.com" alt="Bandcamp"> Bandcamp </button>
-
 <button onclick="search('soundcloud')"><img src="//logo.clearbit.com/soundcloud.com" alt="soundcloud"> Soundcloud </button>
-  
 <button onclick="search('azlyrics')"><img src="//logo.clearbit.com/a2zlyrics.co.in" alt="azlyrics"> Azlyrics </button>
-
 <button onclick="search('lyrics')"><img src="//logo.clearbit.com/lyrics.com" alt="lyrics"> Lyrics </button>
-    
 </div> <hr>
-
 
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Movies & Shows :</i>
-      
 <button onclick="search('imdb')"><img src="//logo.clearbit.com/imdb.com" alt="imdb"> Imdb </button>
-      
 <button onclick="search('rottentomatoes')"><img src="//logo.clearbit.com/rottentomatoes.com" alt="rottentomatoes"> RottenTomatoes </button>
-
 </div> <hr>
-
 
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Questions :</i>
-  
 <button onclick="search('ask')"><img src="//logo.clearbit.com/ask.com" alt="ask"> Ask </button>
-  
 <button onclick="search('reddit')"><img src="//logo.clearbit.com/reddit.com" alt="reddit"> Reddit </button>
-
 <button onclick="search('quora')"><img src="//logo.clearbit.com/quora.com" alt="quora"> Quora </button>
-
-
 </div> <hr>
 
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Travel :</i>
-      
 <button onclick="search('tripadvisor')"><img src="//logo.clearbit.com/tripadvisor.com" alt="tripadvisor"> TripAdvisor </button>
-      
 <button onclick="search('tripadvisor')"><img src="//logo.clearbit.com/booking.com" alt="booking"> Booking </button>
-
 <button onclick="search('flightradar')"><img src="//logo.clearbit.com/flightradar24.com" alt="flightradar"> FlightRadar24 </button>
-
 <button onclick="search('planefinder')"><img src="//logo.clearbit.com/planefinder.com" alt="planefinder"> PlaneFinder </button>
-
 </div> <hr>
 
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Jobs :</i>
-  
 <button onclick="search('linkedin')"><img src="//logo.clearbit.com/linkedin.com" alt="linkedin"> LinkedIn </button>
-
 </div> <hr>
-
 
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Courses :</i>
-      
 <button onclick="search('classcentral')"><img src="//logo.clearbit.com/classcentral.com" alt="classcentral"> ClassCentral </button>
-      
 <button onclick="search('coursera')"><img src="//logo.clearbit.com/coursera.com" alt="coursera"> Coursera </button>
-
 <button onclick="search('edx')"><img src="//logo.clearbit.com/edx.org" alt="edx"> EDX </button>
-
 <button onclick="search('learning')"><img src="//logo.clearbit.com/linkedin.com" alt="learning"> LI Learning </button>
-
-
 <button onclick="search('udemy')"><img src="//logo.clearbit.com/udemy.com" alt="udemy"> Udemy </button>
 </div> <hr>
 
 
-
-
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Shopping :</i>
-      
 <button onclick="search('amazon')"><img src="//logo.clearbit.com/amazon.com" alt="amazon"> Amazon </button>
-      
 <button onclick="search('ebay')"><img src="//logo.clearbit.com/ebay.com" alt="ebay"> Ebay </button>
-
 <button onclick="search('aliexpress')"><img src="//logo.clearbit.com/aliexpress.com" alt="aliexpress"> AliExpress </button>
-
 <button onclick="search('noon')"><img src="//logo.clearbit.com/noon.com" alt="noon"> Noon </button>
-
 <button onclick="search('jumia')"><img src="//logo.clearbit.com/jumia.com" alt="jumia"> Jumia </button>
 </div> <hr>
 
 
-
 </div> <a href="https://clearbit.com">Logos provided by Clearbit</a>
-<br>
-<i>made with ❤️ by  Ibrahim Younan </i>
+<br> <!-- logo api //logo.clearbit.com/website.com -->
+<i>made with ❤️ by Ibrahim Younan </i>
 
 <script>
-
-function search(engine) {  const searchQuery = encodeURIComponent(document.getElementById('searchQuery').value);  let searchUrl; switch (engine) {
-
+function search(engine) { const searchQuery = encodeURIComponent(document.getElementById('searchQuery').value); let searchUrl; switch (engine) {
 // Add cases for other search engines here
- 
+
+
 // web
-case 'google':
-searchUrl = `//www.google.com/search?q=${searchQuery}`; break;
-case 'bing':
-searchUrl = `//www.bing.com/search?q=${searchQuery}`; break
-case 'yahoo':
-searchUrl = `//search.yahoo.com/search?p=${searchQuery}`; break;
-case 'yandex':
-searchUrl = `//yandex.com/search/?text=${searchQuery}`; break;
-case 'duckduckgo':
-searchUrl = `//duckduckgo.com/?q=${searchQuery}`; break;
-case 'startpage':
-searchUrl = `//startpage.com/do/search?q=${searchQuery}`; break;
-case 'qwant':
-searchUrl = `//qwant.com/?q=${searchQuery}`; break;
-case 'brave':
-searchUrl = `//search.brave.com/search?q=${searchQuery}`; break;
-case 'swisscows':
-searchUrl = `//swisscows.com/en/web?query=${searchQuery}`; break;
-case 'naver':
-searchUrl = `//search.naver.com/search.naver?query=${searchQuery}`; break;
-case 'baidu':
-searchUrl = `//www.baidu.com/s?wd=${searchQuery}`; break;
-case 'wikipedia':
-searchUrl = `//wikipedia.org/wiki/${searchQuery}`; break;
-case 'archive':
-searchUrl = `//archive.org/search?query=${searchQuery}`; break;
+case 'google':searchUrl = `//www.google.com/search?q=${searchQuery}`;break;
+case 'bing':searchUrl = `//www.bing.com/search?q=${searchQuery}`;break
+case 'yahoo':searchUrl = `//search.yahoo.com/search?p=${searchQuery}`;break;
+case 'yandex':searchUrl = `//yandex.com/search/?text=${searchQuery}`;break;
+case 'duckduckgo':searchUrl = `//duckduckgo.com/?q=${searchQuery}`;break;
+case 'startpage':searchUrl = `//startpage.com/do/search?q=${searchQuery}`;break;
+case 'qwant':searchUrl = `//qwant.com/?q=${searchQuery}`;break;
+case 'brave':searchUrl = `//search.brave.com/search?q=${searchQuery}`;break;
+case 'swisscows':searchUrl = `//swisscows.com/en/web?query=${searchQuery}`;break;
+case 'naver':searchUrl = `//search.naver.com/search.naver?query=${searchQuery}`;break;
+case 'baidu':searchUrl = `//www.baidu.com/s?wd=${searchQuery}`;break;
+case 'wikipedia':searchUrl = `//wikipedia.org/wiki/${searchQuery}`;break;
+case 'archive':searchUrl = `//archive.org/search?query=${searchQuery}`;break;
 
 
 // videos
-case 'youtube':
-searchUrl = `//youtube.com/results?search_query=${searchQuery}`; break;
-case 'dailymotion':
-searchUrl = `//dailymotion.com/search/${searchQuery}`; break;
-case 'vimeo':
-searchUrl = `//vimeo.com/search?q=${searchQuery}`; break;
-case 'twitch':
-searchUrl = `//twitch.tv/search?term=${searchQuery}`; break;
+case 'youtube':searchUrl = `//youtube.com/results?search_query=${searchQuery}`;break;
+case 'dailymotion':searchUrl = `//dailymotion.com/search/${searchQuery}`;break;
+case 'vimeo':searchUrl = `//vimeo.com/search?q=${searchQuery}`;break;
+case 'twitch':searchUrl = `//twitch.tv/search?term=${searchQuery}`;break;
 
 
 // images
-case 'pinterest':
-searchUrl = `//pinterest.com/search/pins/?q=${searchQuery}`; break;
-
-case 'flickr':
-searchUrl = `//flickr.com/search/?text=${searchQuery}`;break;
-
-case 'tineye':
-searchUrl = `//www.tineye.com/search?url=${searchQuery}`; break;
+case 'pinterest':searchUrl = `//pinterest.com/search/pins/?q=${searchQuery}`;break;
+case 'flickr':searchUrl = `//flickr.com/search/?text=${searchQuery}`;break;
+case 'tineye':searchUrl = `//www.tineye.com/search?url=${searchQuery}`;break;
 
 
 // music
-case 'podcasts':
-searchUrl = `//podcasts.google.com/search/${searchQuery}`; break;
-case 'youtube-music':
-searchUrl = `//music.youtube.com/search?q=${searchQuery}`; break;
-case 'spotify':
-searchUrl = `//open.spotify.com/search/results/${searchQuery}`; break;
-case 'itunes':
-searchUrl = `//music.apple.com/search?term=${searchQuery}`; break;
-case 'deezer':
-searchUrl = `//www.deezer.com/search/${searchQuery}`; break;
-case 'bandcamp':
-searchUrl = `//bandcamp.com/search?q=${searchQuery}`; break;
-case 'soundcloud':
-searchUrl = `//soundcloud.com/search?q=${searchQuery}`; break;
-case 'azlyrics':
-searchUrl = `//search.azlyrics.com/search.php?q=${searchQuery}`; break;
-case 'lyrics':
-searchUrl = `//www.lyrics.com/lyrics/${searchQuery}`; break;
+case 'podcasts':searchUrl = `//podcasts.google.com/search/${searchQuery}`;break;
+case 'youtube-music':searchUrl = `//music.youtube.com/search?q=${searchQuery}`;break;
+case 'spotify':searchUrl = `//open.spotify.com/search/results/${searchQuery}`;break;
+case 'itunes':searchUrl = `//music.apple.com/search?term=${searchQuery}`;break;
+case 'deezer':searchUrl = `//www.deezer.com/search/${searchQuery}`;break;
+case 'bandcamp':searchUrl = `//bandcamp.com/search?q=${searchQuery}`;break;
+case 'soundcloud':searchUrl = `//soundcloud.com/search?q=${searchQuery}`;break;
+case 'azlyrics':searchUrl = `//search.azlyrics.com/search.php?q=${searchQuery}`;break;
+case 'lyrics':searchUrl = `//www.lyrics.com/lyrics/${searchQuery}`;break;
 
 
 //questions
-case 'ask':
-searchUrl = `//ask.com/web?q=${searchQuery}`; break;
-case 'reddit':
-searchUrl = `//reddit.com/search/?q=${searchQuery}`; break;
-case 'quora':
-searchUrl = `//quora.com/search?q=${searchQuery}`; break;
+case 'ask':searchUrl = `//ask.com/web?q=${searchQuery}`;break;
+case 'reddit':searchUrl = `//reddit.com/search/?q=${searchQuery}`;break;
+case 'quora':searchUrl = `//quora.com/search?q=${searchQuery}`;break;
 
 
 //travel
-case 'tripadvisor':
-searchUrl = `//tripadvisor.com/Search?q=${searchQuery}`; break;
-case 'booking':
-searchUrl = `//booking.com/searchresults.en-gb.html?label=opensearch-plugin&ss=${searchQuery}`; break;
-case 'flightradar':
-searchUrl = `//www.flightradar24.com/data/flights/${searchQuery}`; break;
-case 'planefinder':
-searchUrl = `//planefinder.net/data/flight/${searchQuery}`; break;
+case 'tripadvisor':searchUrl = `//tripadvisor.com/Search?q=${searchQuery}`;break;
+case 'booking':searchUrl = `//booking.com/searchresults.en-gb.html?label=opensearch-plugin&ss=${searchQuery}`;break;
+case 'flightradar':searchUrl = `//www.flightradar24.com/data/flights/${searchQuery}`;break;
+case 'planefinder':searchUrl = `//planefinder.net/data/flight/${searchQuery}`;break;
 
 
 //jobs
-case 'linkedin':
-searchUrl = `//linkedin.com/jobs/search?keywords=${searchQuery}`; break;
+case 'linkedin':searchUrl = `//linkedin.com/jobs/search?keywords=${searchQuery}`;break;
 
 
 //courses
-case 'classcentral':
-searchUrl = `//classcentral.com/search?q=${searchQuery}`; break;
-case 'coursera':
-searchUrl = `//coursera.org/search?query=${searchQuery}`; break;
-case 'edx':
-searchUrl = `//edx.org/search?q=${searchQuery}`; break;
-case 'learning':
-searchUrl = `//linkedin.com/learning/search?keywords=${searchQuery}`; break;
-case 'udemy':
-searchUrl = `//udemy.com/courses/search/?q=${searchQuery}`; break;
+case 'classcentral':searchUrl = `//classcentral.com/search?q=${searchQuery}`;break;
+case 'coursera':searchUrl = `//coursera.org/search?query=${searchQuery}`;break;
+case 'edx':searchUrl = `//edx.org/search?q=${searchQuery}`;break;
+case 'learning':searchUrl = `//linkedin.com/learning/search?keywords=${searchQuery}`;break;
+case 'udemy':searchUrl = `//udemy.com/courses/search/?q=${searchQuery}`;break;
 
 
 //movies
-case 'imdb':
-searchUrl = `//imdb.com/find/?ref_=opensearch&q=${searchQuery}`; break;
-case 'rottentomatoes':
-searchUrl = `//rottentomatoes.com/search?search=${searchQuery}`; break;
+case 'imdb':searchUrl = `//imdb.com/find/?ref_=opensearch&q=${searchQuery}`;break;
+case 'rottentomatoes':searchUrl = `//rottentomatoes.com/search?search=${searchQuery}`;break;
 
 
 //shoping
-case 'amazon':
-searchUrl = `//www.amazon.com/s?k=${searchQuery}`; break;
-case 'ebay':
-searchUrl = `//www.ebay.com/sch/i.html?_nkw=${searchQuery}`; break;
-case 'aliexpress':
-searchUrl = `//aliexpress.com/w/wholesale-${searchQuery}.html`; break;
-case 'noon':
-searchUrl = `//www.noon.com/search/?q=${searchQuery}`; break;
-case 'jumia':
-searchUrl = `//www.jumia.com/catalog/?q=test${searchQuery}`; break;
+case 'amazon':searchUrl = `//www.amazon.com/s?k=${searchQuery}`;break;
+case 'ebay':searchUrl = `//www.ebay.com/sch/i.html?_nkw=${searchQuery}`;break;
+case 'aliexpress':searchUrl = `//aliexpress.com/w/wholesale-${searchQuery}.html`;break;
+case 'noon':searchUrl = `//www.noon.com/search/?q=${searchQuery}`;break;
+case 'jumia':searchUrl = `//www.jumia.com/catalog/?q=test${searchQuery}`;break;
 
 
 // Add cases for other search engines here
-
-
-default:  console.error('Unsupported search engine');  return; } 
+default: console.error('Unsupported search engine'); return; } 
 window.open(searchUrl, '_blank'); }
-
 function clearInput() { document.getElementById('searchQuery').value = "";}
 </script>
 
