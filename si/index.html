@@ -152,7 +152,9 @@
 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Questions :</i>
-
+  
+<button onclick="search('ask')"><img src="//logo.clearbit.com/ask.com" alt="ask"> Ask </button>
+  
 <button onclick="search('reddit')"><img src="//logo.clearbit.com/reddit.com" alt="reddit"> Reddit </button>
 
 <button onclick="search('quora')"><img src="//logo.clearbit.com/quora.com" alt="quora"> Quora </button>
@@ -193,7 +195,7 @@
 
 <button onclick="search('edx')"><img src="//logo.clearbit.com/edx.org" alt="edx"> EDX </button>
 
-<button onclick="search('learning')"><img src="//logo.clearbit.com/linkedin.com" alt="learning"> L Learning </button>
+<button onclick="search('learning')"><img src="//logo.clearbit.com/linkedin.com" alt="learning"> LI Learning </button>
 
 
 <button onclick="search('udemy')"><img src="//logo.clearbit.com/udemy.com" alt="udemy"> Udemy </button>
@@ -233,7 +235,7 @@ searchUrl = `//www.google.com/search?q=${searchQuery}`; break;
 
 case 'bing':
 searchUrl = `//www.bing.com/search?q=${searchQuery}`; break;
-
+https://search.yahoo.com/search?p=Test
 case 'yandex':
 searchUrl = `//yandex.com/search/?text=${searchQuery}`; break;
 
@@ -252,6 +254,12 @@ searchUrl = `//search.brave.com/search?q=${searchQuery}`; break;
 case 'swisscows':
 searchUrl = `//swisscows.com/en/web?query=${searchQuery}`; break;
 
+case 'naver':
+searchUrl = `//search.naver.com/search.naver?query=${searchQuery}`; break;
+
+https://www.baidu.com/s?wd=Test
+
+    
 case 'wikipedia':
 searchUrl = `//wikipedia.org/wiki/${searchQuery}`; break;
 
@@ -299,6 +307,9 @@ searchUrl = `//www.lyrics.com/lyrics/${searchQuery}`; break;
 
 
 //questions
+case 'ask':
+searchUrl = `//ask.com/web?q=${searchQuery}`; break;
+    
 case 'reddit':
 searchUrl = `//reddit.com/search/?q=${searchQuery}`; break;
 
