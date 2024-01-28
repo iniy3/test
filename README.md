@@ -10,17 +10,14 @@ To add a new search engine, follow these steps:
    - Locate the `.link-container` div in the HTML.
    - Add a new button or anchor (`<button>` or `<a>`) for the new search engine. Example:
      ```html
-     <button onclick="search('newEngine')">
-       <img src="path/to/newEngineIcon.svg" alt="New Engine"> New Engine </button>
+     <button onclick="search('newEngine')"><img src="//logo.clearbit.com/website.com" alt="New Engine"> New Engine </button>
      ```
      - Ensure to replace `newEngine` with a unique identifier for the engine and update the icon path accordingly.
 
 2. **JavaScript Function:**
    - Add a new case in the `search` function in the script section. Example:
      ```javascript
-     case 'newEngine':
-       searchUrl = `//newengine.com/search?q=${searchQuery}`;
-       break;
+     case 'newEngine':searchUrl = `//newengine.com/search?q=${searchQuery}`;break;
      ```
      - Replace `newEngine` with the same identifier used in the HTML.
 
@@ -37,15 +34,12 @@ Suppose you want to add a "Reddit Search" engine:
 
 **HTML:**
 ```html
-<button onclick="search('reddit')">
-  <img src="path/to/redditIcon.svg" alt="Reddit"> Reddit </button>
+<button onclick="search('reddit')"><img src="//logo.clearbit.com/reddit.com" alt="Reddit"> Reddit </button>
 ```
 
 **JavaScript:**
 ```javascript
-case 'reddit':
-  searchUrl = `//www.reddit.com/search?q=${searchQuery}`;
-  break;
+case 'reddit':searchUrl = `//www.reddit.com/search?q=${searchQuery}`;break;
 ```
 
 Remember to replace placeholder values with actual details for the new search engine.
