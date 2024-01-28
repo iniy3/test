@@ -5,6 +5,24 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="icon" href="favicon.ico" type="image/x-icon">
+ 
+ 
+ <link rel="manifest" href="manifest.json">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ <meta name="theme-color" content="#ffffff">
+ 
+ <script>
+   if ('serviceWorker' in navigator) { window.addEventListener('load', function() {
+       navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+       console.log('ServiceWorker registration successful with scope: ', registration.scope);
+       }, function(err) { console.error('ServiceWorker registration failed: ', err); }
+       ); }); }
+ </script>
+ 
+ 
+ 
+ 
  <title>Search It</title>
  <link rel="stylesheet" href="style.css">
 
@@ -23,6 +41,7 @@ input[type="text"] {width: 70%; padding: 15px; margin: 15px; margin-right: 3px; 
 </style>
 
 </head>
+
 
 
 <body>
@@ -117,6 +136,12 @@ input[type="text"] {width: 70%; padding: 15px; margin: 15px; margin-right: 3px; 
 <!-- ########################################################## -->
 <div class="link-container"> <i class="cat">Jobs :</i>
 <button onclick="search('linkedin')"><img src="//logo.clearbit.com/linkedin.com" alt="linkedin"> LinkedIn </button>
+<button onclick="search('upwork')"><img src="//logo.clearbit.com/upwork.com" alt="Upwork"> Upwork </button>
+<button onclick="search('freelancer')"><img src="//logo.clearbit.com/freelancer.com" alt="Freelancer"> Freelancer </button>
+<button onclick="search('fiverr')"><img src="//logo.clearbit.com/fiverr.com" alt="Fiverr"> Fiverr </button>
+<button onclick="search('behance')"><img src="//logo.clearbit.com/behance.net" alt="Behance"> Behance </button>
+<button onclick="search('peopleperhour')"><img src="//logo.clearbit.com/peopleperhour.com" alt="PeoplePerHour"> PeoplePerHour </button>
+<button onclick="search('guru')"><img src="//logo.clearbit.com/guru.com" alt="Guru"> Guru </button>
 </div> <hr>
 
 
@@ -205,6 +230,12 @@ case 'planefinder':searchUrl = `//planefinder.net/data/flight/${searchQuery}`;br
 
 //jobs
 case 'linkedin':searchUrl = `//linkedin.com/jobs/search?keywords=${searchQuery}`;break;
+case 'upwork':searchUrl = `//www.upwork.com/search/profiles/?q=${searchQuery}`;break;
+case 'freelancer':searchUrl = `//www.freelancer.com/search?q=${searchQuery}`;break;
+case 'fiverr':searchUrl = `//www.fiverr.com/search/gigs?query=${searchQuery}`;break;
+case 'behance':searchUrl = `//www.behance.net/search/projects?search=${searchQuery}`;break;
+case 'peopleperhour':searchUrl = `//www.peopleperhour.com/freelance/${searchQuery}`;break;
+case 'guru':searchUrl = `//www.guru.com/d/freelancers/q/${searchQuery}`;break;
 
 
 //courses
