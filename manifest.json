@@ -1,9 +1,9 @@
 {
   "name": "Search It",
   "short_name": "Search It",
-  "start_url": "/testing/",
+  "Start_url": "/Testing/",  
   "display": "standalone",
   "background_color": "#f4f4f4",
   "theme_color": "#f4f4f4",
-  "icons": [{"src": "//logo.clearbit.com/website.com", "sizes": "192x192", "type": "image/png"}]
+  "icons": [{"src": "/testing/icon.png", "sizes": "512x512", "type": "image/png"}]
 }
