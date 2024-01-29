@@ -12,6 +12,11 @@ To add a new search engine, follow these steps:
      ```html
      <button onclick="search('newEngine')"><img src="//logo.clearbit.com/website.com" alt="New Engine"> New Engine </button>
      ```
+  
+      ```html
+     <a target="_blank"><img src="//logo.clearbit.com/website.com" alt="New Engine"> New Engine </a>
+     ```
+      
      - Ensure to replace `newEngine` with a unique identifier for the engine and update the icon path accordingly.
 
 2. **JavaScript Function:**
