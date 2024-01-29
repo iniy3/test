@@ -5,7 +5,8 @@ const OFFLINE_URL = '/testing/offline.html'; // Path to offline fallback page
 const urlsToCache = [
   '/',
   '/testing/',
-  '/index.html',
+  '/testing/index.html',
+  '/testing/offline.html',
   '/style.css',
   '/script.js',
   
