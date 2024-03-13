@@ -1,0 +1,224 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    
+    
+    <link href="/dist/cdn/beer.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script type="module" src="/dist/cdn/beer.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+<script>
+
+ // Check if dark mode is enabled from local storage
+const isDark = localStorage.getItem('darkMode') === 'true';
+ 
+ // Function to enable dark mode
+function dark() {
+  document.body.classList.add('dark');
+  localStorage.setItem('darkMode', true);
+ }
+ 
+ // Function to disable dark mode
+function light() {
+  document.body.classList.remove('dark'); 
+  localStorage.setItem('darkMode', false);
+ }
+ 
+ // Function to toggle dark mode
+function mode() {
+  if (document.body.classList.contains('dark')) {light();} else {dark();}
+ }
+ 
+ // Apply dark mode based on initial state
+if (isDark) {dark();}  else {light();}
+ 
+</script>
+
+
+
+
+</head>
+
+<body class="dark">    
+    
+    
+    
+    
+    
+
+ <nav class="bottom s m l">
+  
+  
+ <a data-ui="#page1"><i>home</i><span>Install</span></a>
+ <a data-ui="#drawer" class="active"><i>widgets</i><span>Explore</span></a>
+ <a data-ui="#page2"><i>search</i><span>search</span></a>
+ <a id="shareButton"><i>share</i><span>share</span></a>
+ <a onclick="mode()"><i>light_mode</i><span>theme</span></a>
+ 
+ 
+
+  
+ </nav>
+
+ <header>
+ 
+ 
+ 
+ <nav class="top">
+  <button class="circle transparent" data-ui="#drawer">
+   <i>menu</i>
+  </button>
+  <h5 class="max center-align">Title</h5>
+  <button class="circle transparent">
+   <img class="responsive" src="/dist/favicon.png">
+  </button>
+ </nav>
+
+
+
+
+
+ <dialog class="left no-padding" id="drawer">
+  <nav class="drawer">
+   <header>
+    <nav>
+     <img class="circle" src="/favicon.png">
+     <h6 class="max">Title</h6>
+     <button class="transparent circle large" data-ui="#drawer"><i>close</i></button>
+    </nav>
+   </header>
+
+   <a><i>inbox</i><span class="max">Inbox</span><b>24</b></a>
+   <a><i>send</i><span>Outbox</span></a>
+   <a><i>favorite</i><span>favorities</span></a>
+   <a><i>delete</i><span>Trash</span></a>
+
+   <div class="divider"></div> <label>Labels</label>
+
+   <a><i>fiber_manual_record</i><span>Label</span></a>
+   <a><i>change_history</i><span>Label</span></a>
+   <a><i>stop</i><span>Label</span></a>
+  </nav>
+ </dialog>
+ 
+ 
+ </header>
+  
+ <main class="responsive">
+
+
+
+
+
+
+ 
+ 
+ 
+ <div class="page active bottom" id="page1">
+  
+   
+
+  
+<div class="grid">
+ 
+ 
+ <div class="s12 m6 l3">
+  <article class="no-padding">
+   <img class="responsive small" src="/dist/beer-and-woman.svg"><!----><!---->
+   <div class="padding">
+    <h5>Title</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <nav>
+     <button>Button</button>
+    </nav>
+   </div>
+  </article>
+ </div>
+ 
+ 
+ <div class="s12 m6 l3">
+  <article class="no-padding">
+   <img class="responsive small" src="/dist/beer-and-woman.svg"><!----><!---->
+   <div class="padding">
+    <h5>Title</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <nav>
+     <button>Button</button>
+    </nav>
+   </div>
+  </article>
+ </div>
+ 
+ 
+ <div class="s12 m6 l3">
+  <article class="no-padding">
+   <img class="responsive small" src="/dist/beer-and-woman.svg"><!----><!---->
+   <div class="padding">
+    <h5>Title</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <nav>
+     <button>Button</button>
+    </nav>
+   </div>
+  </article>
+ </div>
+ 
+ 
+ <div class="s12 m6 l3">
+  <article class="no-padding">
+   <img class="responsive small" src="/dist/beer-and-woman.svg"><!----><!---->
+   <div class="padding">
+    <h5>Title</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <nav>
+     <button>Button</button>
+    </nav>
+   </div>
+  </article>
+ </div>
+</div>
+     
+   
+  
+ </div>
+ 
+ <div class="page top" id="page2">
+  <h5>Page 2</h5>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </main>
+
+
+
+
+
+
+ <div class="large-divider"></div>
+ 
+ 
+ 
+ 
+
+
+  
+  
+  
+  
+
+
+
+  </body>
+</html>
